@@ -18,7 +18,7 @@
     "db-migrate-pg": "^1.2.2",
     "db-migrate-plugin-es6cjs": "^0.0.2",
     "discord-webhook-node": "^1.1.8",
-    "discord.js": "^14.7.1",
+    "discord.js": "^14.8.0",
     "dot-env": "^0.0.1",
     "dotenv": "^16.0.3",
     "ethers": "^6.0.2",
