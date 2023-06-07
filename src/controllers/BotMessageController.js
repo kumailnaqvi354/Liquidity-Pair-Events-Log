@@ -15,20 +15,20 @@ export const sendImprisonDiscordMessage = async (req, res) => {
       "mint((address,address,uint24,int24,int24,uint256,uint256,uint256,uint256,address,uint256))"
     ) {
       payload = {
-        transactionType: req.body.events[0].matchReasons[0].signature,
-        token0: req.body.events[0].args[0][0],
-        token1: req.body.events[0].args[0][1],
-        fees: req.body.events[0].args[0][2],
-        from: req.body.events[0].transaction.from,
+        transactionType: req?.body?.events[0].matchReasons[0].signature || "No Value",
+        token0: req?.body?.events[0].args[0][0] || "No Value",
+        token1: req?.body?.events[0].args[0][1] || "No Value",
+        fees: req?.body?.events[0].args[0][2] || "No Value",
+        from: req?.body?.events[0].transaction.from || "No Value",
       };
     } else {
       payload = {
-        transactionType: req.body.events[0].matchReasons[0].signature,
-        poolId: req.body.events[0].matchReasons[0].params.tokenId,
-        amount0: req.body.events[0].matchReasons[0].params.amount0,
-        amount1: req.body.events[0].matchReasons[0].params.amount1,
-        ratio: req.body.events[0].matchReasons[0].params.liquidity,
-        from: req.body.events[0].transaction.from,
+        transactionType: req?.body?.events[0].matchReasons[0].signature || "No Value",
+        poolId: req?.body?.events[0].matchReasons[0].params.tokenId || "No Value",
+        amount0: req?.body?.events[0].matchReasons[0].params.amount0 || "No Value",
+        amount1: req?.body?.events[0].matchReasons[0].params.amount1 || "No Value",
+        ratio: req?.body?.events[0].matchReasons[0].params.liquidity || "No Value",
+        from: req?.body?.events[0].transaction.from || "No Value",
       };
     }
 
