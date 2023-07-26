@@ -9,6 +9,7 @@ export const sendImprisonDiscordMessage = async (req, res) => {
     // console.log("debugger 3",req.body.events[0].transaction.from)
     // console.log("debugger r",req.body.events[0].transaction.logs)
 
+    console.log("debugger", req.body.events[0].matchReasons[0].signature);
     let payload;
     if (
       req.body.events[0].matchReasons[0].signature ===
